@@ -1,3 +1,8 @@
 {
-    "quality": 80
+    "jpeg": {
+      "quality": 80
+    },
+    "png": {
+      "quality": 80
+    }
 }

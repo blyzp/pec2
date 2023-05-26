@@ -78,10 +78,11 @@ function toggleTheme() {
     if (toggle === 1) {
         if (document.querySelector("body.index") === null) {
             styleA1.style = "background-color: black; color: white;";
-        } else {
-            styleA1.style = `background-color: black; background-image: url(${imgDark}); color: white;`;            
-            if (mediaQuery) {
-                styleA1.style = `background-image: url(${imgDarkMob});`;
+        } else {            
+            if (mediaQuery.matches) {
+                styleA1.style = `background-color: black; background-image: url(${imgDarkMob}); color: white;`;
+            } else {
+                styleA1.style = `background-color: black; background-image: url(${imgDark}); color: white;`;
             }
         }
         toggleDark();
@@ -89,10 +90,11 @@ function toggleTheme() {
     } else {
         if (document.querySelector("body.index") === null) {
             styleA1.style = "background-color: white; color: darkslategray;"; 
-        } else {
-            styleA1.style = `background-color: white; background-image: url(${imgLight}); color: darkslategray;`;            
-            if (mediaQuery) {
-                styleA1.style = `background-image: url(${imgLightMob});`;
+        } else {            
+            if (mediaQuery.matches) {
+                styleA1.style = `background-color: white; background-image: url(${imgLightMob}); color: darkslategray;`;
+            } else {
+                styleA1.style = `background-color: white; background-image: url(${imgLight}); color: darkslategray;`;
             }
         }  
         toggleLight();

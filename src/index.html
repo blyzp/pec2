@@ -47,7 +47,13 @@
         <div id="box-text">
             <p>Visita <span class="sitename">Tokio</span> y experimenta una metrópolis moderna con un pasado rico en historia.</p>
             <div id="box-clip">
-                <a href="historia.html"><img class="clip" srcset="img/montse-monmo-oIx-8t9tJoo-unsplash-m.jpg 123w, img/montse-monmo-oIx-8t9tJoo-unsplash.jpg 175w" sizes="(max-width: 640px) 123px, 175px" src="img/montse-monmo-oIx-8t9tJoo-unsplash.jpg" alt="Historia"></a>
+                <a href="historia.html">
+                    <picture>
+                        <source media="(max-width: 640px)" srcset="img/montse-monmo-oIx-8t9tJoo-unsplash-m.jpg">
+                        <source media="(min-width: 641px)" srcset="img/montse-monmo-oIx-8t9tJoo-unsplash.jpg">
+                        <img class="clip" src="img/montse-monmo-oIx-8t9tJoo-unsplash.jpg" alt="Historia">
+                    </picture>
+                  </a>
                 <svg width="0" height="0" xmlns="http://www.w3.org/2000/svg">
                     <defs>
                         <clipPath id="myClip">
