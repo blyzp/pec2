@@ -1,0 +1,15 @@
+{
+  "extends": [
+    "stylelint-config-recommended-scss",
+    "stylelint-config-recess-order"
+  ],
+  "plugins": ["stylelint-use-nesting"],
+  "rules": {
+    "selector-class-pattern": "^.[a-z]([a-z0-9-]+)?(__([a-z0-9]+-?)+)?(--([a-z0-9]+-?)+){0,2}$",
+    "csstools/use-nesting": "always",
+    "color-hex-length": "long",
+    "color-no-invalid-hex": true,
+    "comment-no-empty": true,
+    "no-duplicate-selectors": true
+  }
+}

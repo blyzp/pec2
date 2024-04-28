@@ -1,0 +1,132 @@
+.footer {
+  background-color: var(--bs-white);
+}
+
+.footer-main {
+  max-width: $breakpoint-xl;
+  margin-inline: auto;
+  font-size: 0.9rem;
+  text-align: center;
+
+  &__info {
+    padding-top: 35px;
+    padding-bottom: 25px;
+    margin-inline: 50px;
+    border-bottom: 2px solid var(--bs-light);
+  }
+
+  &__nav {
+    padding-top: 25px;
+    padding-bottom: 35px;
+  }
+
+  &__paragraph {
+    margin: 0;
+  }
+
+  &__list {
+    padding: 0;
+    margin-top: 15px;
+  }
+
+  &__item {
+    margin-block: 10px;
+    list-style-type: none;
+  }
+
+  &__icon-list {
+    padding: 0;
+    margin-top: 20px;
+  }
+
+  &__icon-item {
+    display: inline-block;
+    margin-inline: 20px;
+    font-size: 1.25rem;
+    list-style-type: none;
+  }
+}
+
+@supports (display: grid) {
+  .footer-main {
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__item {
+      margin-block: 5px;
+    }
+
+    @media (min-width: $breakpoint-md) {
+      &__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        padding-inline: 150px;
+      }
+    }
+
+    @media (min-width: $breakpoint-xl) {
+      &__nav {
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+      }
+
+      &__info {
+        margin-inline: 25px;
+      }
+
+      &__logo {
+        justify-self: start;
+        padding-left: 25px;
+      }
+
+      &__list {
+        align-items: center;
+        padding-block: unset;
+        padding-inline: 75px;
+        margin: unset;
+      }
+
+      &__icon-list {
+        align-self: center;
+        justify-self: end;
+        margin-right: 10px;
+      }
+
+      &__icon-item {
+        margin-inline: 15px;
+      }
+    }
+  }
+}
+
+@layer components {
+  .component-navbar {
+    top: -1px;
+    background-color: var(--bs-white);
+    border-bottom: 1px solid var(--bs-gray-300);
+
+    &__brand {
+      font-family: $title;
+    }
+
+    &__item {
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    @media (min-width: $breakpoint-md) {
+      padding-inline: 50px;
+    }
+
+    @media (min-width: $breakpoint-lg) {
+      padding-inline: calc((100vw - $breakpoint-lg) / 2 + 25px);
+    }
+
+    @media (min-width: $breakpoint-xl) {
+      padding-inline: calc((100vw - $breakpoint-xl) / 2 + 25px);
+    }
+  }
+}

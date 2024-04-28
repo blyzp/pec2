@@ -1,0 +1,39 @@
+.main {
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+    justify-content: center;
+  }
+}
+
+@layer components {
+  .component-card {
+    max-width: 350px;
+
+    &__img {
+      border-radius: 5px;
+    }
+
+    &__title {
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+  }
+
+  @container (min-width: #{$breakpoint-sm}) {
+    .component-card {
+      max-width: 300px;
+    }
+  }
+
+  @container (min-width: #{$breakpoint-md}) {
+    .component-card {
+      max-width: 350px;
+
+      &__text {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}

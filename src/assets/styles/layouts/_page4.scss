@@ -1,0 +1,58 @@
+.main {
+  &__subtitle {
+    margin-top: 50px;
+    margin-bottom: 25px;
+    font-family: $title;
+    font-size: 1.5rem;
+    color: var(--bs-primary);
+  }
+}
+
+@layer components {
+  .component-carousel {
+    max-width: 85dvw;
+    margin-inline: auto;
+
+    &__caption {
+      display: block;
+      padding-block: 5px;
+      border: 1px solid var(--bs-white);
+      border-radius: 25px;
+
+      &--dp3 {
+        background-color: $color-dp3;
+      }
+
+      &--hsl {
+        background-color: $color-hsl;
+      }
+
+      &--lch {
+        background-color: $color-lch;
+      }
+    }
+
+    &__title {
+      margin-bottom: 5px;
+      font-size: 1.2rem;
+    }
+
+    &__text {
+      margin-bottom: 0;
+      font-size: 0.9rem;
+    }
+  }
+
+  .component-accordion {
+    &__body {
+      font-size: 0.9rem;
+      text-align: left;
+    }
+  }
+
+  @container (min-width: #{$breakpoint-sm}) {
+    .component-carousel {
+      max-width: 85cqw;
+    }
+  }
+}

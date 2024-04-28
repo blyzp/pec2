@@ -1,0 +1,13 @@
+@function getCol($color, $number) {
+  @return color.scale($color, $lightness: $number);
+}
+
+@function getMap($key) {
+  @if $key == color {
+    @return map.get($background, color);
+  } @else if $key == small {
+    @return url(map.get($background, image-sm));
+  } @else if $key == medium {
+    @return url(map.get($background, image-md));
+  }
+}

@@ -1,0 +1,53 @@
+/* Custom: Breakpoints */
+
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+/* Custom: Appearance */
+
+$title: "Pacifico", "Georgia", "Times New Roman", serif;
+
+$background: (
+  color: #eeeee9,
+  image-sm: "../images/joanna-kosinska-Prfs32wh-o4-unsplash.jpg",
+  image-md: "../images/joanna-kosinska-Prfs32wh-o4-unsplash-md.jpg",
+);
+
+/* Bootstrap: General */
+
+$enable-important-utilities: false;
+
+$primary: #5f68c1;
+$secondary: getCol($primary, 15%);
+$light: getCol($primary, 75%);
+$dark: getCol($primary, -15%);
+
+$grid-gutter-width: 0;
+
+/* Bootstrap: Components */
+
+$accordion-button-active-bg: $light;
+$accordion-button-focus-box-shadow: none;
+
+$card-border-color: unset;
+$card-border-radius: unset;
+
+$carousel-transition-duration: 0.5s;
+
+$navbar-light-brand-color: $primary;
+$navbar-light-brand-hover-color: $dark;
+$navbar-light-color: $primary;
+$navbar-light-hover-color: $dark;
+$navbar-nav-link-padding-x: 20px;
+$navbar-padding-x: 20px;
+$navbar-toggler-focus-width: unset;
+
+$popover-header-bg: getMap(color);
+
+/* New colors */
+
+$color-dp3: color(display-p3 0.372549 0.407843 0.756863 / 0.5);
+$color-hsl: hsl(234.5 44.1% 56.5% / 0.5);
+$color-lch: oklch(from $primary l c h / 0.5);

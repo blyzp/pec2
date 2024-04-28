@@ -1,0 +1,334 @@
+.link {
+  &--pop {
+    color: var(--bs-secondary);
+  }
+}
+
+@layer index {
+  @container (width < #{$breakpoint-md}) {
+    .link {
+      &--pop {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+@layer index-mod {
+  @container (min-width: #{$breakpoint-md}) {
+    .link {
+      &--pop {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+.grid {
+  width: 75cqw;
+  min-width: 310px;
+  margin-inline: auto;
+  text-transform: uppercase;
+
+  &__image {
+    position: relative;
+    height: 180px;
+    background-color: getMap(color);
+    background-image: getMap(small);
+    background-size: cover;
+    border: 1px solid var(--bs-gray-300);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  &__pop {
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+  }
+
+  &__text {
+    font-size: 1.3rem;
+    background-color: var(--bs-white);
+  }
+
+  &__top {
+    padding-block: 10px;
+    letter-spacing: 2px;
+    word-spacing: 8px;
+  }
+
+  &__middle {
+    padding-block: 10px;
+    color: var(--bs-primary);
+    border-top: 2px solid var(--bs-primary);
+    border-bottom: 1px solid var(--bs-primary);
+  }
+
+  &__middle-left {
+    word-spacing: calc((310px - (3 * 1.3rem)) / 2);
+  }
+
+  &__middle-right {
+    letter-spacing: 4px;
+    word-spacing: 6px;
+  }
+
+  &__bottom {
+    padding-block: 10px;
+    margin-bottom: 0;
+    word-spacing: 5px;
+  }
+
+  &__source {
+    padding-block: 15px;
+    padding-inline: 10px;
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    background-color: getMap(color);
+    border: 1px solid var(--bs-gray-300);
+  }
+
+  &__source-right-text::before {
+    content: "(";
+  }
+
+  &__source-right-text::after {
+    content: ")";
+  }
+
+  @media (min-width: $breakpoint-md) {
+    &__image {
+      height: 230px;
+      background-image: getMap(medium);
+      background-position-y: bottom 300px;
+    }
+
+    &__text {
+      max-width: 430px;
+      margin-inline: auto;
+      font-size: 1.5rem;
+    }
+
+    &__top {
+      padding-block: 15px;
+      letter-spacing: 5px;
+      word-spacing: 14px;
+    }
+
+    &__middle {
+      padding-block: 15px;
+    }
+
+    &__middle-left {
+      word-spacing: calc((430px - (3 * 1.5rem)) / 2);
+    }
+
+    &__middle-right {
+      margin-top: 15px;
+      letter-spacing: 7px;
+      word-spacing: 20px;
+    }
+
+    &__bottom {
+      padding-block: 15px;
+      letter-spacing: 3px;
+      word-spacing: 11px;
+    }
+
+    &__source {
+      padding-block: 25px;
+    }
+  }
+}
+
+@supports (display: grid) {
+  .link {
+    &--pop {
+      display: inline-block;
+      margin-inline: 10px;
+      border: 1px solid var(--bs-secondary);
+      border-radius: 50%;
+    }
+  }
+
+  @layer index {
+    @container (width < #{$breakpoint-md}) {
+      .link {
+        &--pop {
+          width: 60px;
+          height: 60px;
+          padding-top: calc((60px - 1.5rem) / 2);
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+
+  @layer index-mod {
+    @container (min-width: #{$breakpoint-md}) {
+      .link {
+        &--pop {
+          width: 70px;
+          height: 70px;
+          padding-top: calc((70px - 1.6rem) / 2);
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+
+  .grid {
+    &__image,
+    &__pop {
+      position: static;
+      right: unset;
+      bottom: unset;
+    }
+
+    &__image {
+      display: grid;
+      grid-template-areas:
+        "one two"
+        "three four";
+      align-items: end;
+      justify-content: end;
+    }
+
+    &__pop {
+      grid-area: four;
+      padding-bottom: 10px;
+    }
+
+    &__top,
+    &__bottom {
+      padding-block: 15px;
+    }
+
+    &__middle {
+      display: grid;
+      grid-template-columns: 1fr, 1fr;
+      gap: 5px;
+      align-items: center;
+      padding: 0;
+      border: 0;
+    }
+
+    &__middle-left {
+      justify-self: self-end;
+      width: 60px;
+      height: 60px;
+      padding-top: 18px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-align: center;
+      border: 1px solid var(--bs-primary);
+      border-radius: 50%;
+      word-spacing: -3px;
+    }
+
+    &__middle-right {
+      grid-column: 2 / 3;
+      justify-self: self-start;
+      padding-block: 15px;
+      margin-top: 0;
+      letter-spacing: 0.5px;
+      border-block: 1px solid var(--bs-primary);
+      word-spacing: 0.75px;
+    }
+  }
+
+  @container (min-width: #{$breakpoint-md}) {
+    .link {
+      &--year {
+        color: var(--bs-white);
+      }
+    }
+
+    .grid {
+      &__middle-right {
+        letter-spacing: 5px;
+        word-spacing: 5px;
+      }
+
+      &__source {
+        display: grid;
+        grid-template-columns: 1fr, 1fr;
+        gap: 10px;
+      }
+
+      &__source-left {
+        padding-inline: 10px;
+        font-size: 0.9rem;
+        line-height: 2rem;
+        text-align: right;
+        letter-spacing: 10px;
+        border-right: 1px solid var(--bs-primary);
+      }
+
+      &__source-right {
+        grid-column: 2 / 3;
+        align-content: start;
+        width: 40px;
+        height: 40px;
+        padding-top: 8px;
+        padding-left: 2px;
+        font-size: 0.5rem;
+        letter-spacing: 2px;
+        background-color: var(--bs-secondary);
+        border-radius: 50%;
+      }
+
+      &__source-right-text::before,
+      &__source-right-text::after {
+        content: "";
+      }
+    }
+  }
+
+  @container (min-width: #{$breakpoint-lg}) {
+    .grid {
+      &__pop {
+        padding-right: 20px;
+        padding-bottom: 20px;
+      }
+
+      &__source-left {
+        padding-inline: 20px;
+        letter-spacing: 15px;
+      }
+
+      &__source-right {
+        width: 50px;
+        height: 50px;
+        padding-top: 12px;
+        margin-inline: 20px;
+        font-size: 0.7rem;
+      }
+    }
+  }
+
+  @media (width > $breakpoint-xl) {
+    .grid {
+      &__pop {
+        padding-right: 30px;
+        padding-bottom: 30px;
+      }
+
+      &__source-left {
+        align-self: center;
+        padding-inline: 30px;
+        letter-spacing: 20px;
+      }
+
+      &__source-right {
+        width: 60px;
+        height: 60px;
+        padding-right: 2px;
+        margin-block: 30px;
+        font-size: 0.9rem;
+        writing-mode: sideways-rl;
+      }
+    }
+  }
+}

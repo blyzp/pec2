@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="././assets/styles/main.scss"
+        />
+        <!-- do not remove this line! -->
+        <title>Concurso</title>
+    </head>
+    <body class="page">
+        <div class="container">
+            <include src="./views/header.html"></include>
+            <div class="main">
+                <h1 class="main__title">Markets</h1>
+                <div
+                    id="carousel"
+                    class="component-carousel carousel slide"
+                    data-bs-ride="carousel"
+                >
+                    <div class="component-carousel__inner carousel-inner">
+                        <div
+                            class="component-carousel__item carousel-item active"
+                        >
+                            <picture class="component-carousel__picture">
+                                <source
+                                    srcset="
+                                        ./assets/images/jermaine-ee-kRhgHNrCdDM-unsplash.jpg?as=webp
+                                    "
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="./assets/images/jermaine-ee-kRhgHNrCdDM-unsplash.jpg"
+                                    class="component-carousel__img d-block w-100"
+                                    alt="Gran Mercado Central, Los Angeles"
+                                />
+                            </picture>
+                            <div
+                                class="component-carousel__caption component-carousel__caption--dp3 carousel-caption d-none d-md-block"
+                            >
+                                <h5 class="component-carousel__title">
+                                    Los Angeles
+                                </h5>
+                                <p id="la" class="component-carousel__text"></p>
+                            </div>
+                        </div>
+                        <div class="component-carousel__item carousel-item">
+                            <picture class="component-carousel__picture">
+                                <source
+                                    srcset="
+                                        ./assets/images/martijn-vonk-xO4QI1Eoxyg-unsplash.jpg?as=webp
+                                    "
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="./assets/images/martijn-vonk-xO4QI1Eoxyg-unsplash.jpg"
+                                    class="component-carousel__img d-block w-100"
+                                    alt="La Boqueria, Barcelona"
+                                />
+                            </picture>
+                            <div
+                                class="component-carousel__caption component-carousel__caption--hsl carousel-caption d-none d-md-block"
+                            >
+                                <h5 class="component-carousel__title">
+                                    Barcelona
+                                </h5>
+                                <p
+                                    id="bcn"
+                                    class="component-carousel__text"
+                                ></p>
+                            </div>
+                        </div>
+                        <div class="component-carousel__item carousel-item">
+                            <picture class="component-carousel__picture">
+                                <source
+                                    srcset="
+                                        ./assets/images/cody-chan-OFxnqWpADN4-unsplash.jpg?as=webp
+                                    "
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="./assets/images/cody-chan-OFxnqWpADN4-unsplash.jpg"
+                                    class="component-carousel__img d-block w-100"
+                                    alt="Kuromon Market, Osaka"
+                                />
+                            </picture>
+                            <div
+                                class="component-carousel__caption component-carousel__caption--lch carousel-caption d-none d-md-block"
+                            >
+                                <h5 class="component-carousel__title">Osaka</h5>
+                                <p
+                                    id="osk"
+                                    class="component-carousel__text"
+                                ></p>
+                            </div>
+                        </div>
+                    </div>
+                    <button
+                        class="component-carousel__control-prev carousel-control-prev"
+                        type="button"
+                        data-bs-target="#carousel"
+                        data-bs-slide="prev"
+                    >
+                        <span
+                            class="component-carousel__control-prev-icon carousel-control-prev-icon"
+                            aria-hidden="true"
+                        ></span>
+                        <span
+                            class="component-carousel__control-label component-carousel__control-label--hidden visually-hidden"
+                            >Previous</span
+                        >
+                    </button>
+                    <button
+                        class="component-carousel__control-next carousel-control-next"
+                        type="button"
+                        data-bs-target="#carousel"
+                        data-bs-slide="next"
+                    >
+                        <span
+                            class="component-carousel__control-next-icon carousel-control-next-icon"
+                            aria-hidden="true"
+                        ></span>
+                        <span
+                            class="component-carousel__control-label component-carousel__control-label--hidden visually-hidden"
+                            >Next</span
+                        >
+                    </button>
+                </div>
+                <div class="article-text">
+                    <h2 class="main__subtitle">Imágenes utlizadas</h2>
+                    <div class="component-accordion accordion" id="accordion">
+                        <div class="component-accordion__item accordion-item">
+                            <h2
+                                class="component-accordion__header accordion-header"
+                            >
+                                <button
+                                    class="component-accordion__button accordion-button"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne"
+                                    aria-expanded="true"
+                                    aria-controls="collapseOne"
+                                >
+                                    Sitio
+                                </button>
+                            </h2>
+                            <div
+                                id="collapseOne"
+                                class="component-accordion__collapse accordion-collapse collapse show"
+                                data-bs-parent="#accordion"
+                            >
+                                <div
+                                    class="component-accordion__body accordion-body"
+                                >
+                                    <p class="component-accordion__paragraph">
+                                        Logo por
+                                        <a
+                                            href="https://new.express.adobe.com/tools/logo-maker"
+                                            class="link"
+                                            >Adobe Express</a
+                                        >
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="component-accordion__item accordion-item">
+                            <h2
+                                class="component-accordion__header accordion-header"
+                            >
+                                <button
+                                    class="component-accordion__button accordion-button collapsed"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo"
+                                    aria-expanded="false"
+                                    aria-controls="collapseTwo"
+                                >
+                                    Index
+                                </button>
+                            </h2>
+                            <div
+                                id="collapseTwo"
+                                class="component-accordion__collapse accordion-collapse collapse"
+                                data-bs-parent="#accordion"
+                            >
+                                <div
+                                    class="component-accordion__body accordion-body"
+                                >
+                                    <p class="component-accordion__paragraph">
+                                        <cite class="component-accordion__cite"
+                                            >Polvo blanco en una cuchara de
+                                            madera marrón</cite
+                                        >
+                                        por
+                                        <a
+                                            href="https://unsplash.com/es/@joannakosinska"
+                                            class="link"
+                                            >Joanna Kosinska</a
+                                        >
+                                        |
+                                        <a
+                                            href="https://unsplash.com/es/fotos/polvo-blanco-en-una-cuchara-de-madera-marron-Prfs32wh-o4"
+                                            class="link"
+                                            >Unsplash</a
+                                        >
+                                    </p>
+                                    <p class="component-accordion__paragraph">
+                                        Inspiración para el posicionamiento
+                                        proveniente de
+                                        <cite class="component-accordion__cite">
+                                            Umschlaggestaltung der ersten
+                                            Veröffentlichung der „Vereinigung
+                                            bildender Künstler Österreichs
+                                            Secession“
+                                        </cite>
+                                        por
+                                        <a
+                                            href="https://es.wikipedia.org/wiki/Koloman_Moser"
+                                            class="link"
+                                            >Koloman Moser</a
+                                        >
+                                        |
+                                        <a
+                                            href="https://commons.wikimedia.org/wiki/File:Kolo_Moser_-_Umschlaggestaltung_-_1897.jpeg"
+                                            class="link"
+                                            >Wikipedia</a
+                                        >
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="component-accordion__item accordion-item">
+                            <h2
+                                class="component-accordion__header accordion-header"
+                            >
+                                <button
+                                    class="component-accordion__button accordion-button collapsed"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree"
+                                    aria-expanded="false"
+                                    aria-controls="collapseThree"
+                                >
+                                    Best chefs
+                                </button>
+                            </h2>
+                            <div
+                                id="collapseThree"
+                                class="component-accordion__collapse accordion-collapse collapse"
+                                data-bs-parent="#accordion"
+                            >
+                                <div
+                                    class="component-accordion__body accordion-body"
+                                >
+                                    <p class="component-accordion__paragraph">
+                                        <cite class="component-accordion__cite"
+                                            >Hombre con uniforme de cocinero
+                                            blanco cocinando</cite
+                                        >
+                                        por
+                                        <a
+                                            href="https://unsplash.com/es/@johnathanmphoto"
+                                            class="link"
+                                            >Johnathan Macedo</a
+                                        >
+                                        |
+                                        <a
+                                            href="https://unsplash.com/es/fotos/hombre-con-uniforme-de-cocinero-blanco-cocinando-4NQEvxW2_4w"
+                                            class="link"
+                                            >Unsplash</a
+                                        >
+                                    </p>
+                                    <p class="component-accordion__paragraph">
+                                        <cite class="component-accordion__cite"
+                                            >Reflejo de la mujer chef desde el
+                                            espejo</cite
+                                        >
+                                        por
+                                        <a
+                                            href="https://unsplash.com/es/@sixstreetunder"
+                                            class="link"
+                                            >Craig Whitehead</a
+                                        >
+                                        |
+                                        <a
+                                            href="https://unsplash.com/es/fotos/reflejo-de-la-mujer-chef-desde-el-espejo-nmJqPzLHrcc"
+                                            class="link"
+                                            >Unsplash</a
+                                        >
+                                    </p>
+                                    <p class="component-accordion__paragraph">
+                                        <cite class="component-accordion__cite"
+                                            >Hombre de pie frente al
+                                            escritorio</cite
+                                        >
+                                        por
+                                        <a
+                                            href="https://unsplash.com/es/@oxop1"
+                                            class="link"
+                                            >Michael Wave</a
+                                        >
+                                        |
+                                        <a
+                                            href="https://unsplash.com/es/fotos/hombre-de-pie-frente-al-escritorio-CYnQUywzBtI"
+                                            class="link"
+                                            >Unsplash</a
+                                        >
+                                    </p>
+                                    <p class="component-accordion__paragraph">
+                                        <cite class="component-accordion__cite"
+                                            >Chef haciendo pasta dentro de la
+                                            cocina</cite
+                                        >
+                                        por
+                                        <a
+                                            href="https://unsplash.com/es/@adroman"
+                                            class="link"
+                                            >Aditya Romansa</a
+                                        >
+                                        |
+                                        <a
+                                            href="https://unsplash.com/es/fotos/chef-haciendo-pasta-dentro-de-la-cocina-m6p4lqWxfy0"
+                                            class="link"
+                                            >Unsplash</a
+                                        >
+                                    </p>
+                                    <p class="component-accordion__paragraph">
+                                        <cite class="component-accordion__cite"
+                                            >Un hombre con un tatuaje en el
+                                            brazo sentado en una mesa</cite
+                                        >
+                                        por
+                                        <a
+                                            href="https://unsplash.com/es/@avoccoon"
+                                            class="link"
+                                            >Alex Shih Mendez</a
+                                        >
+                                        |
+                                        <a
+                                            href="https://unsplash.com/es/fotos/un-hombre-con-un-tatuaje-en-el-brazo-sentado-en-una-mesa-uCXo_D2ksNg"
+                                            class="link"
+                                            >Unsplash</a
+                                        >
+                                    </p>
+                                    <p class="component-accordion__paragraph">
+                                        <cite class="component-accordion__cite"
+                                            >Una mujer con traje de chef
+                                            preparando comida en una
+                                            cocina</cite
+                                        >
+                                        por
+                                        <a
+                                            href="https://unsplash.com/es/@official_umoh"
+                                            class="link"
+                                            >Emediong Umoh</a
+                                        >
+                                        |
+                                        <a
+                                            href="https://unsplash.com/es/fotos/una-mujer-con-traje-de-chef-preparando-comida-en-una-cocina-3L1_YONLcXY"
+                                            class="link"
+                                            >Unsplash</a
+                                        >
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="component-accordion__item accordion-item">
+                            <h2
+                                class="component-accordion__header accordion-header"
+                            >
+                                <button
+                                    class="component-accordion__button accordion-button collapsed"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFour"
+                                    aria-expanded="false"
+                                    aria-controls="collapseFour"
+                                >
+                                    Blog article
+                                </button>
+                            </h2>
+                            <div
+                                id="collapseFour"
+                                class="component-accordion__collapse accordion-collapse collapse"
+                                data-bs-parent="#accordion"
+                            >
+                                <div
+                                    class="component-accordion__body accordion-body"
+                                >
+                                    <p class="component-accordion__paragraph">
+                                        <cite class="component-accordion__cite"
+                                            >Un primer plano de un hongo sobre
+                                            un fondo blanco</cite
+                                        >
+                                        por
+                                        <a
+                                            href="https://unsplash.com/es/@syucyann"
+                                            class="link"
+                                            >k z</a
+                                        >
+                                        |
+                                        <a
+                                            href="https://unsplash.com/es/fotos/un-primer-plano-de-un-hongo-sobre-un-fondo-blanco-esqhT2SHkTc"
+                                            class="link"
+                                            >Unsplash</a
+                                        >
+                                    </p>
+                                    <p class="component-accordion__paragraph">
+                                        <cite class="component-accordion__cite"
+                                            >Mortero negro junto a la caja
+                                            marrón en la fotografía de la vista
+                                            superior</cite
+                                        >
+                                        por
+                                        <a
+                                            href="https://unsplash.com/es/@toddquackenbush"
+                                            class="link"
+                                            >Todd Quackenbush</a
+                                        >
+                                        |
+                                        <a
+                                            href="https://unsplash.com/es/fotos/mortero-negro-junto-a-la-caja-marron-en-la-fotografia-de-la-vista-superior-x5SRhkFajrA"
+                                            class="link"
+                                            >Unsplash</a
+                                        >
+                                    </p>
+                                    <p class="component-accordion__paragraph">
+                                        <cite class="component-accordion__cite"
+                                            >Alimentos cocinados en plato de
+                                            cerámica blanca</cite
+                                        >
+                                        por
+                                        <a
+                                            href="https://unsplash.com/es/@edwardhowellphotography"
+                                            class="link"
+                                            >Edward Howell</a
+                                        >
+                                        |
+                                        <a
+                                            href="https://unsplash.com/es/fotos/alimentos-cocinados-en-plato-de-ceramica-blanca-vvUy1hWVYEA"
+                                            class="link"
+                                            >Unsplash</a
+                                        >
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="component-accordion__item accordion-item">
+                            <h2
+                                class="component-accordion__header accordion-header"
+                            >
+                                <button
+                                    class="component-accordion__button accordion-button collapsed"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFive"
+                                    aria-expanded="false"
+                                    aria-controls="collapseFive"
+                                >
+                                    Markets
+                                </button>
+                            </h2>
+                            <div
+                                id="collapseFive"
+                                class="component-accordion__collapse accordion-collapse collapse"
+                                data-bs-parent="#accordion"
+                            >
+                                <div
+                                    class="component-accordion__body accordion-body"
+                                >
+                                    <p class="component-accordion__paragraph">
+                                        <cite class="component-accordion__cite"
+                                            >Gente caminando al lado de la
+                                            mesa</cite
+                                        >
+                                        por
+                                        <a
+                                            href="https://unsplash.com/es/@eejermaine"
+                                            class="link"
+                                            >Jermaine Ee</a
+                                        >
+                                        |
+                                        <a
+                                            href="https://unsplash.com/es/fotos/gente-caminando-al-lado-de-la-mesa-kRhgHNrCdDM"
+                                            class="link"
+                                            >Unsplash</a
+                                        >
+                                    </p>
+                                    <p class="component-accordion__paragraph">
+                                        <cite class="component-accordion__cite"
+                                            >Una multitud de personas caminando
+                                            alrededor de un mercado</cite
+                                        >
+                                        por
+                                        <a
+                                            href="https://unsplash.com/es/@daviator737"
+                                            class="link"
+                                            >Martijn Vonk</a
+                                        >
+                                        |
+                                        <a
+                                            href="https://unsplash.com/es/fotos/una-multitud-de-personas-caminando-alrededor-de-un-mercado-xO4QI1Eoxyg"
+                                            class="link"
+                                            >Unsplash</a
+                                        >
+                                    </p>
+                                    <p class="component-accordion__paragraph">
+                                        <cite class="component-accordion__cite"
+                                            >Personas dentro del edificio</cite
+                                        >
+                                        por
+                                        <a
+                                            href="https://unsplash.com/es/@cceee"
+                                            class="link"
+                                            >Cody Chan</a
+                                        >
+                                        |
+                                        <a
+                                            href="https://unsplash.com/es/fotos/personas-dentro-del-edificio-OFxnqWpADN4"
+                                            class="link"
+                                            >Unsplash</a
+                                        >
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <include src="./views/footer.html"></include>
+        <script type="module" src="././assets/scripts/main.js"></script>
+        <script type="module" src="././assets/scripts/time.js"></script>
+        <!-- do not remove this line! -->
+    </body>
+</html>

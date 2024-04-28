@@ -1,0 +1,48 @@
+@layer bootstrap, override, components, index-mod, page3-mod, index, page3;
+
+* {
+  box-sizing: border-box;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.05rem;
+}
+
+@layer override {
+  .container {
+    max-width: unset;
+  }
+}
+
+.main {
+  container-type: inline-size;
+  max-width: $breakpoint-xl;
+  padding: 25px;
+  margin-inline: auto;
+  margin-top: 25px;
+  margin-bottom: 50px;
+  text-align: center;
+
+  &__title {
+    margin-bottom: 50px;
+    font-family: $title;
+    font-size: 2rem;
+    color: var(--bs-primary);
+
+    @media (min-width: $breakpoint-md) {
+      font-size: 3rem;
+    }
+  }
+}
+
+.link {
+  font-weight: 600;
+  text-decoration: none;
+}
